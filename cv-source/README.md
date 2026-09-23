@@ -1,15 +1,16 @@
-# Accessible CV sources
+# Accessible CV companions
 
-These semantic HTML files are the source for the downloadable English and Turkish CV PDFs.
+These semantic HTML files mirror the content of the downloadable English and Turkish CV PDFs. The supplied PDF exports at the repository root are canonical because their layouts differ by language.
 
-Generate PDF/UA-1 files with WeasyPrint 68.1 from the repository root:
+The HTML companions can be rendered for a quick content review with WeasyPrint:
 
 ```sh
-weasyprint --pdf-variant pdf/ua-1 cv-source/cv-en.html Baris_Surkit_CV_EN.pdf
-weasyprint --pdf-variant pdf/ua-1 cv-source/cv-tr.html Baris_Surkit_CV_TR.pdf
+mkdir -p tmp/pdfs
+weasyprint --pdf-variant pdf/ua-1 cv-source/cv-en.html tmp/pdfs/cv-en-companion.pdf
+weasyprint --pdf-variant pdf/ua-1 cv-source/cv-tr.html tmp/pdfs/cv-tr-companion.pdf
 ```
 
-After every content update, confirm that each PDF is one A4 page, reports `Tagged: yes`, and exposes a logical heading/list/link structure:
+After every PDF replacement, confirm that each document is one page, reports `Tagged: yes`, and exposes a logical heading/list/link structure:
 
 ```sh
 pdfinfo Baris_Surkit_CV_EN.pdf

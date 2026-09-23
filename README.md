@@ -1,6 +1,6 @@
 # barissurkit.com
 
-Personal portfolio website for Barış Sürkit, a Computer Engineering student building practical projects across software, AI, data, and the web.
+Personal portfolio website for Barış Sürkit, a software developer and Computer Engineering student building reliable products across software, AI, data, and the web.
 
 **Live site:** [barissurkit.com](https://barissurkit.com)
 
@@ -11,7 +11,7 @@ Personal portfolio website for Barış Sürkit, a Computer Engineering student b
 - English/Turkish language switching with persisted light/dark theme preference
 - Responsive layout, skip link, keyboard focus styles, semantic landmarks, and descriptive image alternatives
 - Canonical URLs, Open Graph/Twitter metadata, JSON-LD person data, `robots.txt`, and `sitemap.xml`
-- Downloadable English and Turkish CV PDFs with editable semantic HTML sources in `cv-source/`
+- Downloadable English and Turkish CV PDFs with semantic HTML companions in `cv-source/`
 
 ## Tech stack
 
@@ -25,7 +25,7 @@ projects/                     Project index and case studies
 images/                       Profile and project screenshots
 script.js                     Theme, language, and mobile navigation behavior
 style.css                     Shared visual system and responsive layout
-cv-source/                    Accessible HTML CV sources and print styles
+cv-source/                    Accessible HTML CV companions and print styles
 Baris_Surkit_CV_*.pdf         Downloadable CVs
 robots.txt / sitemap.xml      Search engine discovery files
 ```
@@ -44,12 +44,12 @@ Open <http://localhost:8000>. Opening HTML files directly can make relative navi
 
 The site is deployed as a GitHub Pages static site with the custom domain in `CNAME`. The production URL is <https://barissurkit.com>.
 
-## CV sources
+## CV files
 
-The PDFs are generated from the HTML sources with WeasyPrint. See [`cv-source/README.md`](cv-source/README.md) for the reproducible command and accessibility checks. The CV sources intentionally use `noindex, nofollow`; the public portfolio pages are the discoverable documents.
+The supplied PDF exports are the canonical downloadable CVs. The files in `cv-source/` are synchronized semantic HTML companions for accessibility and maintenance. They intentionally use `noindex, nofollow`; the public portfolio pages are the discoverable documents.
 
 ## Contact
 
 - [GitHub](https://github.com/barissurkit)
-- [LinkedIn](https://www.linkedin.com/in/bar%C4%B1%C5%9F-s%C3%BCrkit-748538320/)
-- [Email](mailto:barissurkitdev@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/barissurkit/)
+- [Email](mailto:baris.surkit.dev@gmail.com)
