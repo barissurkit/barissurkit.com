@@ -53,3 +53,49 @@ The supplied PDF exports are the canonical downloadable CVs. The files in `cv-so
 - [GitHub](https://github.com/barissurkit)
 - [LinkedIn](https://www.linkedin.com/in/barissurkit/)
 - [Email](mailto:baris.surkit.dev@gmail.com)
+
+## Gereksinimler
+
+- Siteyi görüntülemek için herhangi bir statik dosya sunucusu (aşağıdaki örnekte Python 3'ün yerleşik `http.server` modülü) ve bir tarayıcı. Derleme adımı ve bağımlılık yoktur.
+- Testleri çalıştırmak için Node.js 22 veya üzeri (yerleşik `node:test` çalıştırıcısı kullanılır; doğrulama Node.js 24 ile yapıldı).
+
+## Kurulum
+
+```sh
+git clone https://github.com/barissurkit/barissurkit.com.git
+cd barissurkit.com
+```
+
+Kurulacak bir bağımlılık yoktur (`package.json` veya `requirements.txt` bulunmaz).
+
+## Kullanım
+
+Depo dizininde yerel sunucuyu başlatın:
+
+```sh
+python3 -m http.server 8000
+```
+
+Beklenen çıktı:
+
+```text
+Serving HTTP on :: port 8000 (http://[::]:8000/) ...
+```
+
+Ardından <http://localhost:8000> adresini açın; ana sayfa "Barış Sürkit — Software, AI & Data" başlığıyla yüklenir. Sayfadaki düğmelerle dil (EN/TR) ve tema (açık/koyu) değiştirilebilir.
+
+## Testler
+
+```sh
+node --test "tests/**/*.test.mjs"
+```
+
+Testler `tests/` dizinindedir ve şunları doğrular: gerekli sayfaların varlığı, her sayfada `lang` ve `<title>`, sayfalardaki yerel bağlantı ve dosya referanslarının çözülmesi, `sitemap.xml` içindeki adreslerin gerçek sayfalara karşılık gelmesi, `robots.txt` ve `CNAME` içeriği, `script.js` sözdizimi ve sayfalarda kullanılan `data-i18n` anahtarlarının Türkçe çevirilerinin bulunması.
+
+## Katkı
+
+Katkı rehberi için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bakın.
+
+## Lisans
+
+[MIT](LICENSE)
